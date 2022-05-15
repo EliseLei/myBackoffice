@@ -1,0 +1,8 @@
+.navbar ul {
+  list-style: none;
+}
+
+.active {
+  fill:#5c2c98;
+  color:#5c2c98;
+}

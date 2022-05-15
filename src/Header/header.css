@@ -1,0 +1,17 @@
+.Header {
+  width:100%;
+  height:auto;
+  margin-bottom:20px;
+  background-color:white;
+  border-bottom:1px solid #f0f1f6;
+}
+
+.Header nav {
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.Header nav ul {
+  display:inline-flex;
+}

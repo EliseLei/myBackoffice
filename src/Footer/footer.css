@@ -1,0 +1,17 @@
+.Footer-container {
+  text-align:center;
+}
+
+.Footer {
+  background-color:#f0f0f4;
+  padding:25px 0;
+  margin-top:20px;
+}
+
+.Footer ul {
+  list-style: none;
+}
+
+.Footer li a {
+  color:white;
+}

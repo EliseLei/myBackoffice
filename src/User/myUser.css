@@ -1,0 +1,113 @@
+.MyUser {
+  background-color:white;
+  border:1px solid #f0f1f6;
+  margin-bottom:10px;
+  padding:20px;
+  position:relative;
+  border-radius:5px;
+}
+
+.MyUser .MyUser-avatar img {
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid #f0f1f6;
+}
+
+.MyUser-nameemail {
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+}
+
+.button-showdetail {
+  background-color:white;
+  border:1px solid #e0e0e0;
+  display:flex;
+  margin-top:10px;
+  align-items:center;
+  fill:white;
+  font-size:14px;
+  padding:10px 25px;
+  border-radius:5px;
+}
+
+.button-delete {
+  display: flex;
+  align-items: center;
+  position:absolute;
+  right:10px;
+  top:10px;
+  fill: white;
+  font-size: 14px;
+  padding: 10px 25px;
+  margin-left:20px;
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+.button-delete:hover {
+
+}
+
+.button-showdetail:hover {
+  background-color:#5c2c98;
+  color:white;
+  border:1px solid #5c2c98;
+  display:flex;
+  align-items:center;
+  fill:white;
+  padding:10px 25px;
+}
+
+.MyUser .MyUser-avatar {
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.MyUser-info {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.MyUser .MyUser-action {
+  display:flex;
+  justify-content: center;
+}
+
+
+@media (min-width:576px) {
+  .MyUser-container {
+    display:flex;
+    align-items:center;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+
+  .MyUser-info {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+  }
+
+  .MyUser .MyUser-action {
+    display:flex;
+    align-items:center;
+  }
+
+  .button-showdetail {
+    margin-top:0;
+  }
+
+  .button-delete {
+    display:none;
+  }
+
+  .MyUser-nameemail {
+    display:flex;
+    align-items: initial;
+    flex-direction:column;
+  }
+}
