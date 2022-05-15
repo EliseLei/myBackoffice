@@ -14,7 +14,6 @@ class MyUsersLocal extends Component {
       return (
         <div key={indexOfUser}>
         <MyUserLocal deleteUser={this.props.deleteUser} id={indexOfUser} indexOfUser={indexOfUser} user={user} />
-    {/*   <MyUserLocal deleteUser={this.props.deleteUser} id={user.idUser} indexOfUser={user.idUser} user={user} /> */}
         </div>
       );
     });

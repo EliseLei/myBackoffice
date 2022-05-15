@@ -4,26 +4,6 @@ import { NavLink } from "react-router-dom";
 
 class UserDetailLocal extends Component {
 
-/*  constructor(props) {
-    super(props);
-    this.myUser();
-  } */
-
-/*  myUser() {
-    const id = this.props.match.params.id;
-    const user = this.props.usersLocal.find(function(element){
-      console.log(element);
-       if(element == id) {
-          return true;
-       }
-       else {
-          return false;
-       }
-    })
-    console.log(user);
-    return user;
-  */
-
   render() {
     return (
       <div className="UserDetail">
@@ -34,7 +14,7 @@ class UserDetailLocal extends Component {
           <div className="UserDetail-container">
             <div className="UserDetail-inner">
               Utilisateur n°
-          
+
               {this.props.match.params.id}
               <div className="UserDetail-avatar">
                 <img alt="avatar" key={this.props.usersLocal.avatar} src={this.props.usersLocal[this.props.match.params.id].avatar} />

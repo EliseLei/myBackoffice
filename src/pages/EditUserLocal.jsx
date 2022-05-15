@@ -10,7 +10,8 @@ class EditUserLocal extends Component {
       this.state = {
         firstname:this.props.usersLocal[this.props.match.params.id].firstname,
         lastname:this.props.usersLocal[this.props.match.params.id].lastname,
-        email:this.props.usersLocal[this.props.match.params.id].email
+        email:this.props.usersLocal[this.props.match.params.id].email,
+        avatar:this.props.usersLocal[this.props.match.params.id].avatar,
       }
   }
 
@@ -35,14 +36,22 @@ class EditUserLocal extends Component {
     });
   }
 
+  onChangeUserAvatar(event) {
+    event.preventDefault();
+    this.setState({
+      avatar:URL.createObjectURL(event.target.files[0]),
+    });
+  }
+
   updateUser(event) {
     event.preventDefault();
-    this.props.updateUser(this.props.match.params.id, this.state.firstname, this.state.lastname, this.state.email);
+    this.props.updateUser(this.props.match.params.id, this.state.firstname, this.state.lastname, this.state.email, this.state.avatar);
     this.props.history.push("/");
     this.setState({
       firstname:this.state.firstname,
       lastname:this.state.lastname,
-      email:this.state.email
+      email:this.state.email,
+      avatar:this.state.avatar
     });
   }
 
@@ -58,7 +67,7 @@ class EditUserLocal extends Component {
             <div className="EditUser-inner">
               <form>
                 <div className="EditUser-avatar">
-                  <img alt="avatar" key={this.props.usersLocal.avatar} src={this.props.usersLocal[this.props.match.params.id].avatar} />
+                  <img alt="avatar" onChange={this.onChangeUserAvatar.bind(this)} key={this.props.usersLocal.avatar} src={this.props.usersLocal[this.props.match.params.id].avatar} />
                 </div>
 
                 <div className="form-item">

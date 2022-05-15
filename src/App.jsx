@@ -23,7 +23,7 @@ class App extends React.Component {
       }
   }
 
-  updateUser(idUser, newfirstname, newlastname, newemail) {
+  updateUser(idUser, newfirstname, newlastname, newemail, newavatar) {
     const newUserLocal = this.state.usersLocal.filter(function(user) {
       if (idUser == user.idUser) {
         return false;
@@ -32,13 +32,14 @@ class App extends React.Component {
         return true;
       }
     })
-    localStorage.setItem('myUserLocal', JSON.stringify([...newUserLocal, {idUser:idUser, firstname:newfirstname, lastname: newlastname, email:newemail}]));
+    localStorage.setItem('myUserLocal', JSON.stringify([...newUserLocal, {idUser:idUser, firstname:newfirstname, lastname: newlastname, email:newemail, avatar:newavatar}]));
 
     this.setState({
        firstname:newfirstname,
        lastname:newlastname,
        email:newemail,
-       usersLocal: [...newUserLocal, {idUser:idUser, firstname:newfirstname, lastname: newlastname, email:newemail}],
+       avatar:newavatar,
+       usersLocal: [...newUserLocal, {idUser:idUser, firstname:newfirstname, lastname: newlastname, email:newemail, avatar:newavatar}],
      });
   }
 
